@@ -1,0 +1,101 @@
+body{
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.super{
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+.mainContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.titleContainer{
+    
+}
+
+form{
+    padding: 10%;
+}
+
+h1, h3{
+    text-align: left;
+}
+
+.mainContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.titleContainer{
+    background-color: #565957;
+    text-align: center;
+}
+
+td{
+    padding: 10px;
+}
+
+.image{
+    float: left;
+    padding-right: 10%;
+}
+
+h1, h3{
+    text-align: left;
+}
+
+.portfolio{
+    width: 80vw;
+}
+
+.portfolioImage{
+    width:100%;
+}
+
+a:link, a:visited {
+    background-color: #2c6fdb;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+a:hover, a:active {
+    background-color: #033485;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #565957;
+}
+  
+li.navbar {
+    float: left;
+}
+  
+li.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    background-color: #565957;
+    padding: 16px;
+    text-decoration: none;
+}
+  
+li.navbar a:hover {
+    background-color: #111111;
+}
