@@ -14,7 +14,7 @@ let navbar = document.getElementById("navbar"); // easy way to have a persistent
 navbar.innerHTML = "<ul class=\"navbar\"><li class=\"navbar\"><a class=\"navbar\" href=\"index.html\">Home</a></li><li class=\"navbar\"><a class=\"navbar\" href=\"portfolio.html\">Portfolio</a></li><li class=\"navbar\"><a class=\"navbar\" href=\"contact.html\">Contact</a></li></ul>";
 
 // I saw this on a portfolio website and decided to remake it myself.
-// Not very necessary but it shows that I can code
+// Not very necessary but it shows that I can code I guess
 class Nathan{
     // Attributes
     firstName = "";
@@ -71,8 +71,8 @@ function AboutPage(){
     nathan.addWorkExperience("Near future", "Junior Developer/Intern at your company", "I am actively seeking job opportunities in tech!")
 
     for (i = 0; i < nathan.workExperience.length; i++){
-        // Automatically pulls data from my class file and populates the table
-        // This makes the code much more maintainable
+        // Automatically pulls data from my class and populates the table
+        // This makes the code much more maintainable... sounds very hireable tbh...
 
         let table = document.getElementById("experienceTable");
         let row = document.createElement("tr");

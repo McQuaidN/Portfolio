@@ -19,8 +19,10 @@ body{
     background-attachment: fixed;
 }
 
-.titleContainer{
-    
+.contentContainer{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    backdrop-filter: blur(6px);
 }
 
 form{
@@ -47,11 +49,11 @@ td{
 
 .image{
     float: left;
-    padding-right: 10%;
+    border-radius: 50%;
 }
 
 h1, h3{
-    text-align: left;
+    text-align: center;
 }
 
 .portfolio{
@@ -99,3 +101,24 @@ li.navbar a {
 li.navbar a:hover {
     background-color: #111111;
 }
+
+#background-video {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    display: block;
+  }
+
+  /* @media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("/resources/images/bg.png") no-repeat;
+      background-size: cover;
+    }
+} */
