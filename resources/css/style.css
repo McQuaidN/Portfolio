@@ -12,17 +12,17 @@ body{
 }
 
 .mainContainer{
-    padding-left: 10%;
-    padding-right: 10%;
     align-items: center;
     justify-content: center;
     background-attachment: fixed;
 }
 
 .contentContainer{
+    padding: 20px;
     background-color: rgba(0,0,0,.5);
     color: #fff;
     backdrop-filter: blur(6px);
+    align-items: center;
 }
 
 form{
@@ -34,12 +34,14 @@ h1, h3{
 }
 
 .mainContainer{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .titleContainer{
-    background-color: #565957;
+    background-color: #000;
     text-align: center;
 }
 
@@ -47,9 +49,16 @@ td{
     padding: 10px;
 }
 
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
 .image{
-    float: left;
     border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 h1, h3{
@@ -57,7 +66,6 @@ h1, h3{
 }
 
 .portfolio{
-    width: 80vw;
 }
 
 .portfolioImage{
@@ -82,7 +90,7 @@ ul.navbar {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #565957;
+    background-color: #000;
 }
   
 li.navbar {
@@ -93,13 +101,13 @@ li.navbar a {
     display: block;
     color: white;
     text-align: center;
-    background-color: #565957;
+    background-color: #000;
     padding: 16px;
     text-decoration: none;
 }
   
 li.navbar a:hover {
-    background-color: #111111;
+    background-color: #111;
 }
 
 #background-video {
@@ -115,10 +123,14 @@ li.navbar a:hover {
     display: block;
   }
 
-  /* @media (max-width: 750px) {
+@media (max-width: 750px) {
     #background-video { display: none; }
     body {
-      background: url("/resources/images/bg.png") no-repeat;
+      background: url("/resources/images/bg.png") fixed;
       background-size: cover;
     }
-} */
+} 
+
+.skills{
+    text-align: center;
+}

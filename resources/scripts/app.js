@@ -65,7 +65,11 @@ function AboutPage(){
             x = Math.floor((Math.random() * FUN_FACTS.length)); 
             // to prevent 2 identical numbers in a row. Won't always work but makes it significantly rarer.
         }
-        document.getElementById("additional").textContent = FUN_FACTS[x];
+        $(document.getElementById("additional")).fadeToggle("100ms", "linear", function(){
+            document.getElementById("additional").textContent = FUN_FACTS[x];
+        })
+        $(document.getElementById("additional")).fadeToggle("100ms", "linear")
+
     }
 
     nathan.addWorkExperience("Near future", "Junior Developer/Intern at your company", "I am actively seeking job opportunities in tech!")
