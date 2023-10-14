@@ -1,6 +1,7 @@
 body{
     height: 100vh;
     background-attachment: fixed;
+    font-family: Consolas;
 }
 
 .super{
@@ -23,6 +24,7 @@ body{
     color: #fff;
     backdrop-filter: blur(6px);
     align-items: center;
+    text-align: center;
 }
 
 form{

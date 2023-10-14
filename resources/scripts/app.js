@@ -1,4 +1,4 @@
-const FUN_FACTS = [
+FUN_FACTS = [
     " with a passion for fighting games",
     " with a love for bad puns",
     " who loves python",
@@ -6,12 +6,18 @@ const FUN_FACTS = [
     " who likes Java and C#",
     " who makes games",
     " with a diploma from Durham College",
-    " who wants to join your team"
+    " who wants to join your team",
+    " who runs video game tournaments",
+    " who was on the honour roll",
+    " who exclusively uses dark mode",
+    " whose favourite colour is black",
+    " who started coding in high school",
+    " who's been a pizza chef",
+    " who loves indian food",
+    " who is half british"
 ]; // Values in marquee
 
-let navbar = document.getElementById("navbar"); // easy way to have a persistent navbar across pages
-
-navbar.innerHTML = "<ul class=\"navbar\"><li class=\"navbar\"><a class=\"navbar\" href=\"index.html\">Home</a></li><li class=\"navbar\"><a class=\"navbar\" href=\"portfolio.html\">Portfolio</a></li><li class=\"navbar\"><a class=\"navbar\" href=\"contact.html\">Contact</a></li></ul>";
+let navbar = document.getElementById("navbar"); // easy way to have a persistent navbar across pagess
 
 // I saw this on a portfolio website and decided to remake it myself.
 // Not very necessary but it shows that I can code I guess
@@ -47,29 +53,28 @@ class Nathan{
 
 const nathan = new Nathan(); // instantiate me
 
-// different things to do on different pages
-switch(document.title){
-    case "About":
-        AboutPage();
-}
+AboutPage();
 
-// special about page functions
 function AboutPage(){
-    var update = setInterval(updateText, 5000); // set text to different fun facts
-    var lastx = 0;
+    shuffle(FUN_FACTS)
+    var update = setInterval(updateText, 3000); // set text to different fun facts
+
+    x = 0;
+
 
     // randomly chooses fun facts.
     function updateText(){
-        let x = Math.floor((Math.random() * FUN_FACTS.length));
-        if (x === lastx){
-            x = Math.floor((Math.random() * FUN_FACTS.length)); 
-            // to prevent 2 identical numbers in a row. Won't always work but makes it significantly rarer.
-        }
+
         $(document.getElementById("additional")).fadeToggle("100ms", "linear", function(){
             document.getElementById("additional").textContent = FUN_FACTS[x];
         })
         $(document.getElementById("additional")).fadeToggle("100ms", "linear")
-
+        if(x === FUN_FACTS.length - 1){
+            FUN_FACTS = shuffle(FUN_FACTS);
+            x = 0;
+        }else{
+            x+= 1;
+        }
     }
 
     nathan.addWorkExperience("Near future", "Junior Developer/Intern at your company", "I am actively seeking job opportunities in tech!")
@@ -115,3 +120,21 @@ function AboutPage(){
         row.appendChild(gpa);
     }
 }
+
+function shuffle(array) {
+    let currentIndex = array.length,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex > 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
